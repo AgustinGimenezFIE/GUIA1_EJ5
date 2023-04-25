@@ -1,4 +1,7 @@
-5. Diseñar un programa que lleve el registro de una cantidad (que el usuario
+# GUIA 1 EJ 5
+AGUSTIN HUGO GIMENEZ
+
+Diseñar un programa que lleve el registro de una cantidad (que el usuario
 determinará en tiempo de ejecución) de productos con los siguientes datos:
 
 a. Código
