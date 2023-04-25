@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include "helper.h"
 
 /*
  5. Diseñar un programa que lleve el registro de una cantidad (que el usuario
@@ -14,6 +16,27 @@ estarlo.
 
 
 int main() {
-    printf("Hello, World!\n");
-    return 0;
+    Producto  *producto;
+    int cantProd=0 , i=0;
+    printf("Ingrese Cantidad de producto : ");
+    scanf("%d",&cantProd);
+    printf("La cantidad de producto ingresados es de : %d",cantProd);
+    producto = (Producto *) malloc(cantProd * sizeof(Producto));
+
+    // Leer los datos de los producto desde la entrada estándar
+    for (i = 0; i < cantProd; i++) {
+        printf("\nIngrese los datos del producto %d:", i + 1);
+        printf("\nCodigo: ");
+        scanf("%d", &producto[i].codigo);
+        printf("Nombre: ");
+        scanf("%s", producto[i].nombre);
+        printf("Stock: ");
+        scanf("%d", &producto[i].stock);
+        printf("Stock Minimo: ");
+        scanf("%d", &producto[i].stockMin);
+    }
+        listarProductos(producto, cantProd);
+
+        free(producto);
+        return 0;
 }
